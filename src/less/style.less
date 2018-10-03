@@ -1,0 +1,42 @@
+@ff: 'PT Sans', sans-serif;
+
+@nav-menu-bg-color: rgba(25, 32, 32, .7);
+@block-bg-color: rgba(20, 42, 53, 0.7);
+@tab-btn-color-1: #041f31;
+@btn-color: #ffcd34;
+@checkbox-color: #fde908;
+@hov-color: #a38317;
+@dropdawn-menu-h-color: #ebbc24;
+@main-bg-img: url(../img/living.png) no-repeat;
+
+//Zeroing out of browser properties
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  margin: 0;
+  padding: 0;
+  font-family: @ff;
+  background: @main-bg-img;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+button:focus,
+input:focus,
+a:focus,
+textarea:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
