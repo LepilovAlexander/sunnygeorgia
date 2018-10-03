@@ -2,12 +2,14 @@
 
 @nav-menu-bg-color: rgba(25, 32, 32, .7);
 @block-bg-color: rgba(20, 42, 53, 0.7);
-@tab-btn-color-1: #041f31;
+@tab-btn-color-active: #041f31;
 @btn-color: #ffcd34;
 @checkbox-color: #fde908;
 @hov-color: #a38317;
 @dropdawn-menu-h-color: #ebbc24;
 @main-bg-img: url(../img/living.png) no-repeat;
+@transiton: 1s;
+@color: #fff;
 
 //Zeroing out of browser properties
 body {
@@ -39,4 +41,106 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+// Header********************************
+.nav-menu-bg-color,
+#dropdown-block {
+  background-color: @nav-menu-bg-color;
+}
+
+div#navbars ul.navbar-nav li.nav-item {
+  margin: 0 0.7rem;
+
+  a.nav-link {
+    color: @color;
+    font-family: @ff;
+    transition: @transiton;
+
+    &:hover {
+      color: @hov-color;
+    }
+  }
+
+}
+
+ul li a.dropdown-toggle {
+  cursor: pointer;
+
+  &::after {
+    display: none;
+  }
+}
+
+#dropdown-block {
+  margin-top: 1.2rem;
+  overflow: hidden;
+  min-width: 16rem;
+
+  .dropdown-menu-head {
+    background-color: @dropdawn-menu-h-color;
+    margin-top: -8px;
+    color: @nav-menu-bg-color;
+  }
+
+  .dmh-item {
+    display: flex;
+    padding: 0.5rem;
+
+    p {
+      font-family: @ff;
+      padding-left: 0.5rem;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+
+  .dropdown-menu-body {
+    padding-top: 0.5rem;
+
+    p {
+      margin-bottom: 0.1rem;
+
+      a {
+        color: @color;
+        text-decoration: none;
+        font-family: @ff;
+        transition: @transiton;
+
+        &:hover {
+          color: @hov-color;
+        }
+      }
+    }
+  }
+
+
+}
+
+// Tabs**********************************
+div.tabs-container {
+  margin-top: 11.2rem;
+
+  div.row ul.nav-tabs li.nav-item {
+    background-color: @btn-color;
+
+    a.nav-link {
+      padding: 1rem 8rem;
+      border-radius: 0;
+      border: none;
+      color: #000;
+      font-family: @ff;
+
+      img {
+        width: 15px;
+        margin-right: 1rem;
+      }
+
+      &.active {
+        background-color: @tab-btn-color-active;
+        color: @color;
+        font-family: @ff;
+      }
+    }
+  }
 }
