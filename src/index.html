@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
 </head>
 
 <body>
@@ -53,16 +54,16 @@
                 <div class="container dropdown-menu-body">
                   <div class="row">
                     <div class="col-6">
-                      <p><a href="#">Lorem</a></p>
-                      <p><a href="#">Lorem</a></p>
-                      <p><a href="#">Lorem</a></p>
-                      <p><a href="#">Lorem</a></p>
+                      <p><a href="#">Анаклия</a></p>
+                      <p><a href="#">Батуми</a></p>
+                      <p><a href="#">Гонио</a></p>
+                      <p><a href="#">Квариати</a></p>
                     </div>
                     <div class="col-6">
-                      <p><a href="#">Lorem</a></p>
-                      <p><a href="#">Lorem</a></p>
-                      <p><a href="#">Lorem</a></p>
-                      <p><a href="#">Lorem</a></p>
+                      <p><a href="#">Бакуриани</a></p>
+                      <p><a href="#">Боржоми</a></p>
+                      <p><a href="#">Годедзи</a></p>
+                      <p><a href="#">Гудаури</a></p>
                     </div>
                   </div>
                 </div>
@@ -86,7 +87,7 @@
     <!-- TABS -->
     <div class='container tabs-container'>
       <div class='row justify-content-center'>
-        <ul class="nav nav-tabs" role="tablist">
+        <ul class="nav nav-tabs justify-content-center" role="tablist">
           <li class="nav-item">
             <a class="nav-link active" href="#living" role="tab" data-toggle="tab"><img src="img/icons/home.png" alt="living">Жильё</a>
           </li>
@@ -95,24 +96,257 @@
           </li>
         </ul>
       </div>
+      <!-- Tab panes -->
+      <div class="tab-content pt-4">
+        <div role="tabpanel" class="tab-pane fade in active show" id="living">
+          <div class='container-fluid'>
+            <div class='row'>
+              <div class="col-lg-6 col-sm-12 pb-2">
+                <div class="select-block">
+                  <div class='container-fluid'>
+                    <div class='row justify-content-center'>
+                      <div class="col-1">
+                        <img src="img/icons/calendar.png" alt="calendar">
+                      </div>
+                      <div class="col-11">
+                        <div class="dropdown-selector">
+                          <button class="selector-menu-btn">
+                            Интервал дат начала тура
+                          </button>
+                          <div class="dropdown-child">
+                            <div class="dd-border">
+                              <p><a href="#">3</a></p>
+                              <p><a href="#">7</a></p>
+                              <p><a href="#">14</a></p>
+                              <p><a href="#">30</a></p>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                    <!--row end-->
+                  </div>
+                  <!--container end-->
+                </div>
+              </div>
+              <div class="col-lg-6 col-sm-12">
+                <div class="select-block">
+                  <div class='container-fluid'>
+                    <div class='row justify-content-center'>
+                      <div class="col-2"><label for="amount" class="select-label">GEL</label></div>
+                      <div class="col-2"><input type="text" id="amount1" readonly></div>
+                      <div class="col-6" id="slider-range"></div>
+                      <div class="col-2"> <input type="text" id="amount2" readonly></div>
+                    </div>
+                    <!--row end-->
+                  </div>
+                  <!--container end-->
+                </div>
+              </div>
+            </div>
+            <!--row end-->
+          </div>
+          <!--container end-->
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="tours">
+          <div class='container '>
+            <div class='row '>
+
+
+              <h1 class="text-white text-center">Туры</h1>
+              <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi enim sit vel commodi
+                eaque non rem
+                maxime eius quasi aliquid, eveniet, earum iure quaerat deleniti aliquam, corrupti ut tempore. Modi et
+                eaque sequi facere minus in tempora vitae dolorem pariatur veniam aut, ex natus saepe repellat dolores
+                laboriosam a voluptatum?</p>
+              <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi enim sit vel commodi
+                eaque non rem
+                maxime eius quasi aliquid, eveniet, earum iure quaerat deleniti aliquam, corrupti ut tempore. Modi et
+                eaque sequi facere minus in tempora vitae dolorem pariatur veniam aut, ex natus saepe repellat dolores
+                laboriosam a voluptatum?</p>
+            </div>
+            <!--row end-->
+          </div>
+          <!--container end-->
+        </div>
+
+      </div>
+
+    </div>
+    <!--container end-->
+    <div class='container pt-4'>
+      <div class='row pb-4'>
+        <div class="d-flex flex-column-reverse">
+          <button data-toggle="collapse" id="search-btn" data-target="#search">Расширенный поиск</button>
+        </div>
+
+      </div>
       <!--row end-->
       <div class="row">
-        <!-- Tab panes -->
-        <div class="tab-content">
-          <div role="tabpanel" class="tab-pane fade in active" id="living">
-            <h1>Жильё</h1>
-
-
-
-
-
+        <div id="search" class="collapse">
+          <div class='container-fluid '>
+            <div class='row'>
+              <div class="col-lg-6 col-md-12 pb-2">
+                <div class="checkbox-container">
+                  <div class="checkbox-header">
+                    <p>Тип тура</p>
+                  </div>
+                  <div class='container'>
+                    <div class='row '>
+                      <div class="col-6">
+                        <div class="form-check ">
+                          <input class="form-check-input check-custom" type="checkbox" id="check-1">
+                          <label class="form-check-label" for="check-1">
+                            Всё
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check ">
+                          <input class="form-check-input check-custom" type="checkbox" id="check-2">
+                          <label class="form-check-label" for="check-2">
+                            Экстри<wbr>мальные
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check ">
+                          <input class="form-check-input check-custom" type="checkbox" id="check-3">
+                          <label class="form-check-label" for="check-3">
+                            Пляжный
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check ">
+                          <input class="form-check-input check-custom" type="checkbox" id="check-4">
+                          <label class="form-check-label" for="check-4">
+                            Гастроно<wbr>мические
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check ">
+                          <input class="form-check-input check-custom" type="checkbox" id="check-5">
+                          <label class="form-check-label" for="check-5">
+                            Горно-Лыжные
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check ">
+                          <input class="form-check-input check-custom" type="checkbox" id="check-6">
+                          <label class="form-check-label" for="check-6">
+                            Экскур<wbr>сионные
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check ">
+                          <input class="form-check-input check-custom" type="checkbox" id="check-7">
+                          <label class="form-check-label" for="check-7">
+                            Лечебные
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check ">
+                          <input class="form-check-input check-custom" type="checkbox" id="check-8">
+                          <label class="form-check-label" for="check-8">
+                            Паломни<wbr>ческие
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check ">
+                          <input class="form-check-input check-custom" type="checkbox" id="check-9">
+                          <label class="form-check-label" for="check-9">
+                            Свадебные
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <!--row end-->
+                  </div>
+                  <!--container end-->
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-12">
+                <div class="checkbox-container">
+                  <div class="checkbox-header">
+                    <p>Питание</p>
+                  </div>
+                  <div class='container'>
+                    <div class='row '>
+                      <div class="col-6">
+                        <div class="form-check ">
+                          <input class="form-check-input check-custom" type="checkbox" id="check-10">
+                          <label class="form-check-label" for="check-10">
+                            Не Включено
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check ">
+                          <input class="form-check-input check-custom" type="checkbox" id="check-11">
+                          <label class="form-check-label" for="check-11">
+                            <span>FB</span> - Полный пансион
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check ">
+                          <input class="form-check-input check-custom" type="checkbox" id="check-12">
+                          <label class="form-check-label" for="check-12">
+                            <span>BB</span> - только завтрак
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check ">
+                          <input class="form-check-input check-custom" type="checkbox" id="check-13">
+                          <label class="form-check-label" for="check-13">
+                            <span>ai</span> - всё включено
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check ">
+                          <input class="form-check-input check-custom" type="checkbox" id="check-14">
+                          <label class="form-check-label" for="check-14">
+                            <span>hb</span> - завтрак и ужин
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check ">
+                          <input class="form-check-input check-custom" type="checkbox" id="check-15">
+                          <label class="form-check-label" for="check-15">
+                            <span>uai</span> - ультра всё
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <!--row end-->
+                  </div>
+                  <!--container end-->
+                </div>
+              </div>
+            </div>
+            <!--row end-->
           </div>
-          <div role="tabpanel" class="tab-pane fade" id="tours">Туры</div>
-
+          <!--container end-->
         </div>
       </div>
     </div>
     <!--container end-->
+    <div class="container pt-2">
+      <div class="row justify-content-center">
+<button type="button" class="btn" id="select-btn">Подобрать</button>
+      </div>
+    </div>
 
   </section>
 
@@ -130,6 +364,7 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+  <script src="js/jquery-ui.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 

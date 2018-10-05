@@ -1,1 +1,1 @@
-console.log("test");
+$(function(){$("#slider-range").slider({range:!0,min:1,max:3600,values:[1,3e3],slide:function(a,e){$("#amount1").val(e.values[0]),$("#amount2").val(e.values[1]+" +")}}),$("#amount1").val($("#slider-range").slider("values",0)),$("#amount2").val($("#slider-range").slider("values",1)+" +")});

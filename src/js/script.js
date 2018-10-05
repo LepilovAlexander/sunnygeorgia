@@ -1,1 +1,15 @@
-console.log('test');
+$(function () {
+  $("#slider-range").slider({
+    range: true,
+    min: 1,
+    max: 3600,
+    values: [1, 3000],
+    slide: function (event, ui) {
+      $("#amount1").val(ui.values[0]);
+      $("#amount2").val((ui.values[1]) + " +");
+
+    }
+  });
+  $("#amount1").val($("#slider-range").slider("values", 0));
+  $("#amount2").val($("#slider-range").slider("values", 1) + ' +');
+});
